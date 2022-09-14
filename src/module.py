@@ -1,3 +1,3 @@
 import nose
 def myfunc():
-  return "Hello World!"
+  return "Hello World"
