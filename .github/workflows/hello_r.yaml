@@ -1,0 +1,15 @@
+name: Example R
+on:
+  push:
+    paths:
+      - 'miscript.R'
+
+jobs:
+  test-coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: r-lib/actions/setup-r@v2
+      - run: Rscript -e 'install.packages("testthat")' 
+      - run: Rscript "test_myscript.r"
